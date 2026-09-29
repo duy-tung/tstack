@@ -1,0 +1,21 @@
+{
+  "name": "tstack",
+  "displayName": "tstack",
+  "version": "1.0.0",
+  "description": "Align before building, stay in the smart zone, prove it on the real artifact, encode lessons in structure. The best of Matt Pocock's skills and Lauren Tan's pstack, merged for Claude Code.",
+  "author": {
+    "name": "Pham Duy Tung"
+  },
+  "license": "MIT",
+  "keywords": [
+    "workflow",
+    "grilling",
+    "spec",
+    "tickets",
+    "tdd",
+    "verification",
+    "code-review",
+    "context-engineering",
+    "autonomy"
+  ]
+}

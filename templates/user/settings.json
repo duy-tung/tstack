@@ -1,0 +1,21 @@
+{
+  "autoMemoryEnabled": false,
+  "disableClaudeAiConnectors": true,
+  "disableWorkflows": true,
+  "enableArtifact": false,
+  "effortLevel": "medium",
+  "cleanupPeriodDays": 60,
+  "permissions": {
+    "deny": [
+      "DesignSync",
+      "PushNotification",
+      "RemoteTrigger",
+      "ReportFindings",
+      "EnterPlanMode"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "__STATUSLINE__"
+  }
+}

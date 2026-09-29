@@ -1,0 +1,17 @@
+{
+  "name": "tstack",
+  "owner": {
+    "name": "Pham Duy Tung"
+  },
+  "description": "Single-plugin marketplace for tstack. Add it with: claude plugin marketplace add <path to this folder>",
+  "plugins": [
+    {
+      "name": "tstack",
+      "source": "./",
+      "description": "Align before building, stay in the smart zone, prove it on the real artifact, encode lessons in structure.",
+      "version": "1.0.0",
+      "category": "development",
+      "tags": ["workflow", "tdd", "verification", "review", "context"]
+    }
+  ]
+}
