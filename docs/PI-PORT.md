@@ -2,6 +2,14 @@
 
 Tài liệu nghiên cứu, chưa đổi code. Mục tiêu: tstack chạy trên **Pi 0.87.1** thay cho Claude Code và được cài qua [pi-config](https://github.com/duy-tung/pi-config). Mọi khẳng định về Pi được kiểm trên mã và tài liệu của bản đã ghim: `@earendil-works/pi-coding-agent@0.87.1`, `@tintinweb/pi-subagents@0.19.0`, `rpiv-todo`, `rpiv-ask-user-question` 2.11.0, `pi-open-tui@0.3.8` và pi-config ở commit `94d8418`. Chỗ nào còn phải chạy thật mới biết thì ghi **(cần kiểm)**.
 
+> **Đã triển khai (khác đề xuất ở §5):** theo mục tiêu "một bộ setup all-in-one", tstack không được ghim như một package riêng. Bộ skill đã chuyển sang Pi nằm thẳng trong pi-config (`assets/skills/`, thay nguồn mattpocock), kèm:
+> - vai `verifier` trong model-roles;
+> - git guard trong pi-auto-mode, cùng quyết định với `guard_git.py` trên hơn 5.000 lệnh;
+> - extension `smart-zone` (footer, nhắc compaction, `/context-budget`);
+> - `afk` chạy trên pi-goal-x.
+>
+> Xem nhánh `claude/gracious-allen-88a1r0` của pi-config và `docs/workflow.md` ở đó. Repo này giữ bản cho Claude Code (1.0.0).
+
 ## Kết luận ngắn
 
 1. **Phần lớn chuyển được, chủ yếu là thay chữ.** Pi theo chuẩn Agent Skills: `SKILL.md` với `name`, `description`, `disable-model-invocation`. Skill có cờ này bị ẩn khỏi danh sách của model, giống hệt ngữ nghĩa "user-invoked" của tstack. Pi tự giải đường dẫn tương đối theo thư mục skill. Các khoá lạ (`effort`, `paths`, `argument-hint`) bị bỏ qua, không báo lỗi. Trong 38 skill: 5 chạy nguyên, 15 chỉ cần thay chữ, 18 cần sửa ngữ nghĩa (subagent, hỏi người dùng, transcript, hook).
